@@ -9,7 +9,7 @@ router.get('/',async(req,res)=>{
         searchOptions.name= new RegExp(req.query.name,'i')
     }
     try{
-        let authors = await Author.find(searchOptions)
+        const authors = await Author.find(searchOptions)
         res.render("authors/index",{authors:authors,searchOptions:req.query})
     }catch(e){
         console.log(e.message)
@@ -30,12 +30,12 @@ router.post('/',async (req,res)=>{
     })
    
     try{
-        author = await author.save()
+        const newAuthor = await author.save()
         res.redirect('authors')
     } catch(e){
         res.render('authors/new',{
             author:author,
-            errorMessage:e.message
+            errorMessage:"Error Creating Author"
         })
         
     }
