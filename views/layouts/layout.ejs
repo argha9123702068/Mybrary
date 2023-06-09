@@ -17,14 +17,20 @@
     <%- include('../partials/error.ejs')%>
     <%- body%>
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-    <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script >
         FilePond.registerPlugin(FilePondPluginImageResize);
 
         FilePond.registerPlugin(FilePondPluginFileEncode)
         FilePond.registerPlugin(FilePondPluginImagePreview)
+        FilePond.setOptions({
+            stylePanelAspectRatio :150/100,
+            imageResizeTargetWidth:100,
+            imageResizeTargetHeight:150
+        })
         FilePond.parse(document.body);
     </script>
       
