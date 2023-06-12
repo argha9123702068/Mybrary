@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Book = require('./book')
 
-const authoreSchema = new mongoose.Schema({
+const authorSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
@@ -9,7 +9,7 @@ const authoreSchema = new mongoose.Schema({
     }
 })
 
-authoreSchema.pre("deleteOne", function(next){
+authorSchema.pre("deleteOne",function(next){
      Book.find({author:this.id},(err,books)=>{
         if(err){
             next(err)
@@ -20,4 +20,4 @@ authoreSchema.pre("deleteOne", function(next){
         }
     })
 })
-module.exports=mongoose.model('Author',authoreSchema)
+module.exports=mongoose.model('Author',authorSchema)
