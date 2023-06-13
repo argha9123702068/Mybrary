@@ -8,14 +8,20 @@
     <link
     href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
     rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
     <title>Mybrary</title>
 
 </head>
 <body>
+    <div class="container">
+        <%- include('../partials/header.ejs')%>
+        <div class="inner-container">
+            <%- include('../partials/error.ejs')%>
+            <%- body%>
+        </div>
+    </div>
     
-    <%- include('../partials/header.ejs')%>
-    <%- include('../partials/error.ejs')%>
-    <%- body%>
+   
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>

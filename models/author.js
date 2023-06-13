@@ -9,7 +9,7 @@ const authorSchema = new mongoose.Schema({
     }
 })
 
-authorSchema.pre("deleteOne",function(next){
+authorSchema.pre("deleteOne",{document:true,query:false},(next)=>{
      Book.find({author:this.id},(err,books)=>{
         if(err){
             next(err)
