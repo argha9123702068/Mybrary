@@ -1,8 +1,18 @@
+:root{
+    --color-btn-primary-background:hsl(var(--color-base-hue),100%,83%);
+    --color-btn-primary-text:hsl(var(--color-base-hue),100%,20%);
+    --color-btn-border:black;
+    --color-btn-danger-background:hsl(var(--color-danger-hue),100%,83%);
+    --color-btn-danger-text:black;
+    --color-btn-primary-background-dark:hsl(var(--color-base-hue),100%,73%);
+    --color-btn-danger-background-dark:hsl(var(--color-danger-hue),100%,73%);
+}
+
 .btn{
-    border: 1px solid black;
+    border: 1px solid var(--color-btn-border);
     border-radius: 0.5rem;
-    padding: 0.15rem 0.5rem;
-    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
     font-family: 'Gotham Rounded';
     cursor: pointer;
     text-decoration: none;
@@ -10,28 +20,28 @@
 }
 
 .btn-primary{
-    color:hsl(200,100%,20%);
-    background-color: hsl(200,100%,83%);
+    color:var(--color-btn-primary-text);
+    background-color: var(--color-btn-primary-background);
 }
-.btn-primary:hover{
-    background-color: hsl(200,100%,73%);
-    color:hsl(200,100%,10%);
-}
+
 .btn-danger{
-    color:black;
-    background-color: hsl(20,100%,83%);
-
+    color:var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background);
 }
-.btn-danger:hover{
-    background-color: hsl(20,100%,73%);
-    color: black;
 
+.btn-primary:hover{
+    color:var(--color-btn-primary-text);
+    background-color: var(--color-btn-primary-background-dark);
+}
+
+.btn-danger:hover{
+    color:var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background-dark);
 }
 
 .btn-row{
     display: flex;
     align-items: flex-start;
-
 }
 
 .btn-row > *{
@@ -39,5 +49,5 @@
 }
 
 .btn-row > *:first-child{
-    margin-left: 0;
+    margin-left:0;
 }

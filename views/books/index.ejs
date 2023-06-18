@@ -1,4 +1,4 @@
-<h2>Search  Book</h2>
+<h2 class="page-haeder">Search  Book</h2>
 <form action="/books"  method="GET">
     <div class="form-row">
         <div class="form-item">
@@ -24,15 +24,5 @@
    </div>
     
 </form>
-
-<div>
-    <% books.forEach(book => { %>
-        <a href="/books/<%=book.id%>">
-            <img height="150" width="100" src="<%=book.coverImagePath%>">
-
-        </a>
-        
-    <%})%>
-</div>
-    
-
+<br>
+<%- include('../partials/bookGrid',{books:books,large:true})%>

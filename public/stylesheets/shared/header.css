@@ -1,8 +1,15 @@
+:root{
+   --nav-title-font-size:3rem;
+   --nav-title-font-weight:bold;
+   --nav-link-font-weight:300
+}
+
+
 .header-title{
-    color:hsl(200,100%,87%);
+    color:var(--color-text-light);
     text-decoration: none;
-    font-size:3rem ;
-    font-weight: bold;
+    font-size: var(--nav-title-font-size);
+    font-weight: var(--nav-title-font-weight);
 
 }
 
@@ -18,6 +25,11 @@
     display: flex;
     margin: 0;
     padding: 0;
+
+}
+
+.header-nav li a:hover,.header-title:hover{
+    color:white
 }
 
 .header-nav li{
@@ -25,16 +37,9 @@
 }
 
 .header-nav li a{
-    font-size: 0.75rem;
     text-decoration: none;
-    color:hsl(200,100%,87%);
-    font-weight:300;
-    padding:0.5rem;
+    color:var(--color-text-light);
+    font-weight: var(--nav-link-font-weight);
+    padding: 1rem;
+
 }
-
-.header-nav li a:hover, .header-title:hover{
-    color:white;
-}
-
-
-
