@@ -5,5 +5,18 @@
 }
 
 .author-name{
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.author-name a{
+    text-decoration: none;
+    color: bisque;
+    font-size: 1.2rem;
+}
+
+.author-name a:hover{
+    
+    color: rgba(255, 228, 196, 0.726);
+    
 }

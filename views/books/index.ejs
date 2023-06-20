@@ -1,4 +1,4 @@
-<h2 class="page-haeder">Search  Book</h2>
+<h2 class="page-header">Search  Book</h2>
 <form action="/books"  method="GET">
     <div class="form-row">
         <div class="form-item">
@@ -10,11 +10,11 @@
    
     <div class="form-row">
         <div class="form-item">
-            <label>Published After</label>
+            <label>Published after</label>
             <input type="date" name="publishedAfter" value="<%=searchOptions.publishedAfter%>">
         </div>
         <div class="form-item">
-            <label>publishedBefore</label>
+            <label>Published before</label>
             <input type="date" name="publishedBefore" value="<%=searchOptions.publishedBefore%>">
         </div>
     </div>
@@ -24,5 +24,8 @@
    </div>
     
 </form>
+<br>
+<br>
+<br>
 <br>
 <%- include('../partials/bookGrid',{books:books,large:true})%>

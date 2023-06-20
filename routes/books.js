@@ -40,7 +40,7 @@ router.get('/new',async (req,res)=>{
 router.post('/', async(req,res)=>{
     
     const book = new Book({
-        title:req.body.title,
+        title:req.body.title.toUpperCase(),
         author:req.body.author,
         publishDate:new Date(req.body.publishDate),
         pageCount:req.body.pageCount,
@@ -94,7 +94,7 @@ router.put('/:id',async (req,res)=>{
 
     try{
          book = await Book.findById(req.params.id)
-         book.title = req.body.title
+         book.title = req.body.title.toUpperCase()
          book.author = req.body.author
          book.publishDate = new Date(req.body.publishDate)
          book.pageCount = req.body.pageCount

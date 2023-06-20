@@ -9,7 +9,11 @@
 
 .form-row{
     display: flex;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    
+    
+    
 }
 
 .form-item{
@@ -18,7 +22,16 @@
     margin-left: 2rem;
     flex-grow: 1;
     flex-basis: 0;
+    
 }
+
+
+.form-row-end{
+    justify-content: flex-end;
+    
+}
+
+
 
 .form-item-no-grow{
     flex-grow: 0;
@@ -30,8 +43,9 @@
 
 .form-item > label {
     font-size: var(--form-label-font-size);
+    color:bisque;
     margin-bottom: 0.25rem;
-    margin-left: 0.25rem;
+
 }
 
 
@@ -81,4 +95,20 @@
 
 .form-row-end{
     justify-content: flex-end;
+}
+
+
+
+@media screen and (max-width:500px) {
+
+     .form-item{
+        margin-left: 0;
+        margin-bottom: 1rem;
+     }
+
+     .form-item textarea{
+        height:200px;
+        
+     }
+    
 }

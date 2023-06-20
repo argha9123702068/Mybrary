@@ -1,6 +1,6 @@
 :root{
-    --book-cover-width:75px;
-    --book-cover-width-large:150px;
+    --book-cover-width:200px;
+    --book-cover-width-large:200px;
     --book-cover-aspect-ratio:0.75;
 
 }
@@ -16,7 +16,7 @@
 
 .book-grid{
     display: grid;
-    justify-content: center;
+    
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fill,var(--book-cover-width));
 }
@@ -27,7 +27,10 @@
 
 
 .book-details{
+
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .book-details-label{
@@ -55,9 +58,17 @@
          "author author";
     grid-gap:0.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .book-details-author-button{
     grid-area:author;
     justify-self: stretch;
+}
+
+
+@media screen and (max-width:500px) {
+    .book-grid-large{
+        justify-content: center;
+    }
 }
