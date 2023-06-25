@@ -10,6 +10,7 @@
 .form-row{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1.5rem;
     
     
     
@@ -21,7 +22,7 @@
     margin-left: 2rem;
     flex-grow: 1;
     flex-basis: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     
 }
 
@@ -105,21 +106,15 @@
 
      .form-item{
         margin-left: 0;
-        margin-bottom: 1.5rem;
-
-        
-     }
-
-     
+        width:100%;
+       
+    }
 
      .form-item>label{
         font-size: 1rem;
      }
 
-     .form-item{
-        width:100%;
-        
-     }
+    
 
      .form-item input,.form-item select,.form-item textarea{
         font-size: 0.75rem;
