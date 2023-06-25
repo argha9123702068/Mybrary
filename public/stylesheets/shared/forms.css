@@ -9,7 +9,6 @@
 
 .form-row{
     display: flex;
-    margin-bottom: 1rem;
     flex-wrap: wrap;
     
     
@@ -22,6 +21,7 @@
     margin-left: 2rem;
     flex-grow: 1;
     flex-basis: 0;
+    margin-bottom: 0.5rem;
     
 }
 
@@ -99,16 +99,41 @@
 
 
 
+
+
 @media screen and (max-width:500px) {
 
      .form-item{
         margin-left: 0;
-        margin-bottom: 1rem;
-     }
+        margin-bottom: 1.5rem;
 
-     .form-item textarea{
-        height:200px;
         
      }
+
+     
+
+     .form-item>label{
+        font-size: 0.75rem;
+     }
+
+     .form-item{
+        width:100%;
+        
+     }
+
+     .form-item input,.form-item select,.form-item textarea{
+        font-size: 0.75rem;
+        height:1.5rem
+        
+     }
+
+     .form-item:last-child{
+        margin-bottom: 0.5rem;
+     }
+     .form-item textarea{
+        height:120px;
+        
+     }
+     
     
 }

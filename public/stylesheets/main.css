@@ -16,7 +16,9 @@
 }
 
 body{
-    background:linear-gradient(to right,var(--color-background-dark),var(--color-background-light))
+    background:linear-gradient(to right,var(--color-background-dark),var(--color-background-light));
+    margin:0;
+    padding:0;
 }
 
 .container{
@@ -51,11 +53,14 @@ body{
     }
 
     .container{
-        margin: 0 1rem;
+        margin: 1rem 1rem;
     }
 
     .page-header{
+        font-size: 1.2rem;
         text-align: center;
+        margin-bottom: 1rem;
+        
 
     }
 

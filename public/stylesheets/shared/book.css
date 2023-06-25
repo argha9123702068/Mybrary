@@ -1,6 +1,6 @@
 :root{
     --book-cover-width:200px;
-    --book-cover-width-large:200px;
+    --book-cover-width-large:325px;
     --book-cover-aspect-ratio:0.75;
 
 }
@@ -27,7 +27,7 @@
 
 
 .book-details{
-
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,6 +40,7 @@
 }
 
 .book-details-grid{
+    
     display:grid;
     align-content: flex-start;
     align-items: center;
@@ -71,4 +72,24 @@
     .book-grid-large{
         justify-content: center;
     }
+
+    .book-details{
+        font-size: 0.9rem;
+    }
+
+    .book-details-label{
+        font-size: 0.9rem;
+    }
+    :root{
+        --book-cover-width:150px;
+        --book-cover-width-large:150px;
+    }
+    .book-grid{
+        justify-content: center;
+        
+    }
+     .book-grid-large{
+        justify-content: center;
+     }
+    
 }

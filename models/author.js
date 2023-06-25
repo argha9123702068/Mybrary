@@ -9,15 +9,18 @@ const authorSchema = new mongoose.Schema({
     }
 })
 
-authorSchema.pre("deleteOne",{document:true,query:false},(next)=>{
-     Book.find({author:this.id},(err,books)=>{
-        if(err){
-            next(err)
-        }else if (books.length>0){
-            next(new Error("This author still has books"))
+authorSchema.pre("deleteOne",{document:true},async function(next){
+    
+     try{
+        let books =await Book.find({author:this.id})
+        if(books.length>0){
+            next(new Error("this author still has books"))
         }else{
             next()
         }
-    })
+
+     }catch(err){
+        next(err)
+     }
 })
 module.exports=mongoose.model('Author',authorSchema)
