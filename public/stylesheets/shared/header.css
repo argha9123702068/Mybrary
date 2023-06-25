@@ -53,22 +53,27 @@
         
     }
 
+    
+
     .header-title{
         font-size: 2.5rem;
         
     }
 
     .header-nav ul{
+        margin-left: 1rem;
         display: block;
     }
 
 
     .header-nav li a{
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
     .header-nav li{
+        list-style:disc;
         padding: 0;
+        margin-bottom: 0.25rem;
     }
     
 }
